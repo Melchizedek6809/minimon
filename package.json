@@ -1,0 +1,24 @@
+{
+    "name": "vite-phaser-typescript-starter",
+    "version": "0.0.1",
+    "description": "Simple starter template for PhaserJS + TypeScript based games / animations",
+    "type": "module",
+    "author": "Benjamin Vincent Schulenburg <ben@wolkenwelten.net>",
+    "license": "Unlicense",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "format": "npx @biomejs/biome format --write ./src",
+        "preview": "vite preview",
+        "pack_textures": "TexturePacker ./texture_packer.tps",
+        "typecheck": "tsc -p ./tsconfig.json --noEmit",
+        "zip": "npm run build && zip -r ld-itch-compatible.zip dist/"
+    },
+    "devDependencies": {
+        "typescript": "latest",
+        "vite": "latest"
+    },
+    "dependencies": {
+        "phaser": "latest"
+    }
+}
