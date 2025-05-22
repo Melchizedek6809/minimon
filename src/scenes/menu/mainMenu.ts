@@ -20,7 +20,7 @@ export class MainMenuScene extends Scene {
 
     startGame() {
         this.scene.run('UIScene');
-        this.scene.switch('GameScene');
+        this.scene.switch('WorldScene');
     }
 
     addCreditsLinks() {
@@ -53,7 +53,7 @@ export class MainMenuScene extends Scene {
 
     update(time: number, delta: number) {
         const that = this;
-        if (this.input.gamepad.gamepads[0]) {
+        if (this.input.gamepad?.gamepads[0]) {
             const gamepad = this.input.gamepad.gamepads[0];
             if (gamepad.A) {
                 that.startGame();

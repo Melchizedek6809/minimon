@@ -3,7 +3,7 @@ import './game.css';
 
 import options from './options';
 import { Game, Types } from 'phaser';
-import { GameScene } from './scenes/game/gameScene';
+import { WorldScene } from './scenes/game/worldScene';
 import { UIScene } from './scenes/ui/uiScene';
 import { GameOverScene } from './scenes/menu/gameOver';
 import { MainMenuScene } from './scenes/menu/mainMenu';
@@ -32,14 +32,14 @@ const main = () => {
         physics: {
             default: 'arcade',
             arcade: {
-                gravity: { y: 0 },
+                gravity: {x: 0, y: 0 },
                 debug: options.showCollider,
             },
         },
         scene: [
             LoadingScreenScene,
             MainMenuScene,
-            GameScene,
+            WorldScene,
             UIScene,
             GameOverScene,
             GameWonScene,
